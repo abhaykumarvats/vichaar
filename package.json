@@ -1,0 +1,19 @@
+{
+  "name": "vichaar",
+  "version": "1.0.0",
+  "description": "An Thoughts API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhaykv04/vichaar.git"
+  },
+  "author": "Abhay Kumar",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/abhaykv04/vichaar/issues"
+  },
+  "homepage": "https://github.com/abhaykv04/vichaar#readme"
+}

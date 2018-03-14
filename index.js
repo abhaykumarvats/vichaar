@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
     // If sankhya parameter specified
     if (req.query.sankhya) {
         // Find the relevant document
-        Vichaar.findOne({ sankhya: req.query.sankhya }, {_id: 0, bhaasha: 0}, (err, vichaar) => {
+        Vichaar.findOne({ sankhya: req.query.sankhya }, { _id: 0, __v: 0 }, (err, vichaar) => {
             if (err) {
                 // Log error, if any
                 console.log(err);

@@ -2,6 +2,9 @@
 var express = require('express');
 var app = express();
 
+// Assign port number
+var PORT = process.env.PORT || 3000;
+
 // Require Vichaar schema
 var Vichaar = require('./schemas/Vichaar.js');
 
@@ -49,7 +52,7 @@ app.get('/', (req, res) => {
     }
 });
 
-// Listen on port 3000
-app.listen(3000, () => {
-    console.log('(vichaar): Listening on port 3000');
+// Listen on PORT
+app.listen(PORT, () => {
+    console.log('(vichaar): Listening on port', PORT);
 });

@@ -21,7 +21,7 @@ app.get('/random', (req, res) => {
                 // Find a random number in [0, count]
                 var random = Math.floor(Math.random() * count);
                 // Find the relevant document by skipping 'random' documents
-                Vichaar.find({ vishay: req.query.vishay }, { _id: 0, __v: 0, bhaasha: 0 }).skip(random).limit(1).exec((err, vichaar) => {
+                Vichaar.find({ vishay: req.query.vishay }, { _id: 0, __v: 0 }).skip(random).limit(1).exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any
                         console.log(err);
@@ -42,7 +42,7 @@ app.get('/random', (req, res) => {
                 // Find a random number in [0, count]
                 var random = Math.floor(Math.random() * count);
                 // Find the relevant document
-                Vichaar.findOne({ sankhya: random }, { _id: 0, __v: 0, bhaasha: 0 } , (err, vichaar) => {
+                Vichaar.findOne({ sankhya: random }, { _id: 0, __v: 0 }, (err, vichaar) => {
                     if (err) {
                         // Log error, if any
                         console.log(err);

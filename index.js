@@ -2,34 +2,58 @@
 var express = require('express');
 var app = express();
 
-// Assign port number
-var PORT = process.env.PORT || 3000;
-
 // Require Vichaar schema
 var Vichaar = require('./schemas/Vichaar.js');
 
+// Assign port number
+var PORT = process.env.PORT || 3000;
+
 // GET method route for requests to /random
 app.get('/random', (req, res) => {
-    // Count the number of documents
-    Vichaar.count((err, count) => {
-        if (err) {
-            // Log error, if any
-            console.log(err);
-        } else {
-            // Find a random number in [0, count]
-            var random = Math.floor(Math.random() * count);
-            // Find the relevant document
-            Vichaar.findOne({ sankhya: random }, {_id: 0, bhaasha: 0}, (err, vichaar) => {
-                if (err) {
-                    // Log error, if any
-                    console.log(err);
-                } else {
-                    // Send response as json
-                    res.json(vichaar);
-                }
-            });
-        }
-    });
+    // If vishay parameter specified
+    if (req.query.vishay) {
+        // Count the number of relevant documents
+        Vichaar.count({ vishay: req.query.vishay }, (err, count) => {
+            if (err) {
+                // Log error, if any
+                console.log(err);
+            } else {
+                // Find a random number in [0, count]
+                var random = Math.floor(Math.random() * count);
+                // Find the relevant document by skipping 'random' documents
+                Vichaar.find({ vishay: req.query.vishay }, { _id: 0, bhaasha: 0 }).skip(random).limit(1).exec((err, vichaar) => {
+                    if (err) {
+                        // Log error, if any
+                        console.log(err);
+                    } else {
+                        // Send response as json
+                        res.json(vichaar);
+                    }
+                });
+            }
+        });
+    } else {
+        // Count total number of documents
+        Vichaar.count((err, count) => {
+            if (err) {
+                // Log error, if any
+                console.log(err);
+            } else {
+                // Find a random number in [0, count]
+                var random = Math.floor(Math.random() * count);
+                // Find the relevant document
+                Vichaar.findOne({ sankhya: random }, { _id: 0, bhaasha: 0 } , (err, vichaar) => {
+                    if (err) {
+                        // Log error, if any
+                        console.log(err);
+                    } else {
+                        // Send response as json
+                        res.json(vichaar);
+                    }
+                });
+            }
+        });
+    }
 });
 
 // GET method for requests to /

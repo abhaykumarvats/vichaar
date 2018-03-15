@@ -18,10 +18,13 @@ app.get('/random', (req, res) => {
                 // Log error, if any
                 console.log(err);
             } else {
-                // Find a random number in [0, count]
-                var random = Math.floor(Math.random() * count);
+                // Find a random number in [1, count]
+                var random = Math.floor(Math.random() * (count - 1)) + 1;
                 // Find the relevant document by skipping 'random' documents
-                Vichaar.find({ vishay: req.query.vishay }, { _id: 0, __v: 0 }).skip(random).limit(Number(req.query.num) || 1).exec((err, vichaar) => {
+                Vichaar.find({ vishay: req.query.vishay }, { _id: 0, __v: 0 })
+                .skip(random)
+                .limit(Number(req.query.num) || 1)
+                .exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any
                         console.log(err);
@@ -39,10 +42,12 @@ app.get('/random', (req, res) => {
                 // Log error, if any
                 console.log(err);
             } else {
-                // Find a random number in [0, count]
-                var random = Math.floor(Math.random() * count);
+                // Find a random number in [1, count]
+                var random = Math.floor(Math.random() * (count - 1)) + 1;
                 // Find the relevant document(s)
-                Vichaar.find({ sankhya: { $gte: random } }, { _id: 0, __v: 0 }).limit(Number(req.query.num) || 1).exec((err, vichaar) => {
+                Vichaar.find({ sankhya: { $gte: random } }, { _id: 0, __v: 0 })
+                .limit(Number(req.query.num) || 1)
+                .exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any
                         console.log(err);
@@ -61,7 +66,8 @@ app.get('/', (req, res) => {
     // If sankhya parameter specified
     if (req.query.sankhya) {
         // Find the relevant document
-        Vichaar.findOne({ sankhya: req.query.sankhya }, { _id: 0, __v: 0 }, (err, vichaar) => {
+        Vichaar.find({ sankhya: req.query.sankhya }, { _id: 0, __v: 0 })
+        .exec((err, vichaar) => {
             if (err) {
                 // Log error, if any
                 console.log(err);

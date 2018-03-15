@@ -10,20 +10,25 @@ var PORT = process.env.PORT || 3000;
 
 // GET method route for requests to /random
 app.get('/random', (req, res) => {
+    // Initialise num
+    var num = req.query.num ? Number(req.query.num) : 1;
+    
     // If vishay parameter specified
     if (req.query.vishay) {
         // Count the number of relevant documents
-        Vichaar.count({ vishay: req.query.vishay }, (err, count) => {
+        Vichaar.count({ vishay: req.query.vishay })
+        .exec((err, count) => {
             if (err) {
                 // Log error, if any
                 console.log(err);
             } else {
                 // Find a random number in [1, count]
                 var random = Math.floor(Math.random() * (count - 1)) + 1;
-                // Find the relevant document by skipping 'random' documents
+
+                // Find relevant document(s) after skipping 'random' documents
                 Vichaar.find({ vishay: req.query.vishay }, { _id: 0, __v: 0 })
                 .skip(random)
-                .limit(Number(req.query.num) || 1)
+                .limit(num || 1)
                 .exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any
@@ -42,11 +47,15 @@ app.get('/random', (req, res) => {
                 // Log error, if any
                 console.log(err);
             } else {
-                // Find a random number in [1, count]
-                var random = Math.floor(Math.random() * (count - 1)) + 1;
+                // Find random number(s) in [1, count]
+                var randomArray = [];
+                for (var i = 0; i < num; i++) {
+                    randomArray.push(Math.floor(Math.random() * (count - 1)) + 1);
+                }
+                
                 // Find the relevant document(s)
-                Vichaar.find({ sankhya: { $gte: random } }, { _id: 0, __v: 0 })
-                .limit(Number(req.query.num) || 1)
+                Vichaar.find({ sankhya: { $in: randomArray } }, { _id: 0, __v: 0 })
+                .limit(num || 1)
                 .exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any

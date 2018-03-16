@@ -12,11 +12,14 @@ var PORT = process.env.PORT || 3000;
 app.get('/random', (req, res) => {
     // Initialise n
     var n = req.query.n ? Number(req.query.n) : 1;
-    
+
     // If vishay parameter specified
     if (req.query.vishay) {
+        // Assign vishay
+        var vishay = req.query.vishay.replace(/^\w/, (char) => { return char.toUpperCase(); });
+
         // Count the number of relevant documents
-        Vichaar.count({ vishay: req.query.vishay })
+        Vichaar.count({ vishay: vishay })
         .exec((err, count) => {
             if (err) {
                 // Log error, if any
@@ -26,7 +29,7 @@ app.get('/random', (req, res) => {
                 var random = Math.floor(Math.random() * (count - 1)) + 1;
 
                 // Find relevant document(s) after skipping 'random' documents
-                Vichaar.find({ vishay: req.query.vishay }, { _id: 0, __v: 0 })
+                Vichaar.find({ vishay: vishay }, { _id: 0, __v: 0 })
                 .skip(random)
                 .limit(n || 1)
                 .exec((err, vichaar) => {

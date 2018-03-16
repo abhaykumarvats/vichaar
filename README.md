@@ -1,12 +1,20 @@
+# Table of Contents
+* [Introduction](#introduction)
+    * [Features](#features)
+    * [Lingo](#lingo)
+* [Documentaion](#documentation)
+
 # Introduction
 Vichaar is a RESTful web API that lets you fetch one or n thoughts (quotes) from a database of 10,000+ thoughts (quotes).
 
 ## Features
-* Fetch A Particular Thought
-* Fetch A Random Thought
-* Fetch N Random Thoughts
-* Fetch A Random Thought Of A Particular Topic
-* Fetch N Random Thoughts Of A Particular Topic
+* [Fetch A Particular Thought](#fetch-a-particular-thought)
+* [Fetch A Random Thought](#fetch-a-random-thought)
+* [Fetch N Random Thoughts](#fetch-n-random-thoughts)
+* [Fetch A Random Thought Of A Particular Topic](#fetch-a-random-thought-of-a-particular-topic)
+* [Fetch N Random Thoughts Of A Particular Topic](#fetch-n-random-thoughts-of-a-particular-topic)
+
+List of topics is available [here](/public/lists/vishay.txt).
 
 ## Lingo
 Vichaar's lingo is an amalgam of two languages. The greatest one (let's not start a war, shall we?) and the most popular one. Below is a list of five Hindi words you need to know to use Vichaar.
@@ -47,7 +55,7 @@ Fetch a particular thought from the database with its ID.
     * __Code:__ 200
     * __Content:__
 
-        ```
+        ```json
         [
             {
                 "sankhya":1234,
@@ -91,7 +99,7 @@ Fetch a random thought from the database.
     * __Code:__ 200
     * __Content:__
 
-        ```
+        ```json
         [
             {
                 "sankhya":6480,
@@ -132,7 +140,7 @@ Fetch n number of random thoughts from the database.
     * __Code:__ 200
     * __Content:__
 
-        ```
+        ```json
         [
             {
                 "sankhya":1042,
@@ -201,7 +209,7 @@ Fetch a random thought of a particular topic from the database.
     * __Code:__ 200
     * __Content:__
 
-    ```
+    ```json
     [
         {
             "sankhya":7413,
@@ -244,7 +252,7 @@ Fetch n random thoughts of a particular topic from the database.
     * __Code:__ 200
     * __Content:__
 
-    ```
+    ```json
     [
         {
             "sankhya":7137,
@@ -291,6 +299,6 @@ Fetch n random thoughts of a particular topic from the database.
       --url 'https://vichaar.herokuapp.com/random?vishay=Funny&n=5'
     ```
 
-Signing-off v1.0,
+### Signing-off v1.1,
 
-Abhay Kumar
+### Abhay Kumar

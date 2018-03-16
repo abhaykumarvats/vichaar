@@ -17,7 +17,7 @@ Vichaar is a RESTful web API that lets you fetch one or n thoughts (quotes) from
 List of topics is available [here](/public/lists/vishay.txt).
 
 ## Lingo
-Vichaar's lingo is an amalgam of two languages. The greatest one (let's not start a war, shall we?) and the most popular one. Below is a list of five Hindi words you need to know to use Vichaar.
+Vichaar's lingo is an amalgam of two languages. The greatest one (let's not start a war) and the most popular one. Below is a list of five Hindi words you need to know to use Vichaar.
 
 ### Vocab
 \# | Word | Hindi
@@ -299,6 +299,4 @@ Fetch n random thoughts of a particular topic from the database.
       --url 'https://vichaar.herokuapp.com/random?vishay=Funny&n=5'
     ```
 
-### Signing-off v1.2,
-
-### Abhay Kumar
+#### Signing-off v1.2, Abhay Kumar

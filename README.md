@@ -52,7 +52,7 @@ Fetch a particular thought from the database with its ID.
 
 * __Success Response__
 
-    * __Code:__ 200
+    * __Code:__ 200 OK
     * __Content:__
 
         ```json
@@ -96,7 +96,7 @@ Fetch a random thought from the database.
 
 * __Success Response__
 
-    * __Code:__ 200
+    * __Code:__ 200 OK
     * __Content:__
 
         ```json
@@ -137,7 +137,7 @@ Fetch n number of random thoughts from the database.
 
 * __Success Response__
 
-    * __Code:__ 200
+    * __Code:__ 200 OK
     * __Content:__
 
         ```json
@@ -206,7 +206,7 @@ Fetch a random thought of a particular topic from the database.
 
 * __Success Response__
 
-    * __Code:__ 200
+    * __Code:__ 200 OK
     * __Content:__
 
     ```json
@@ -249,7 +249,7 @@ Fetch n random thoughts of a particular topic from the database.
 
 * __Success Response__
 
-    * __Code:__ 200
+    * __Code:__ 200 OK
     * __Content:__
 
     ```json
@@ -299,6 +299,6 @@ Fetch n random thoughts of a particular topic from the database.
       --url 'https://vichaar.herokuapp.com/random?vishay=Funny&n=5'
     ```
 
-### Signing-off v1.1,
+### Signing-off v1.2,
 
 ### Abhay Kumar

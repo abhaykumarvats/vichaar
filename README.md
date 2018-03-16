@@ -59,7 +59,7 @@ Fetch a particular thought from the database with its ID.
         [
             {
                 "sankhya":1234,
-                "vichaar":"It's all about quality of life   and finding a happy balance between work and  friends and family.",
+                "vichaar":"It's all about quality of life and finding a happy balance between work and  friends and family.",
                 "vichaarak":"Philip Green",
                 "vishay":"Life",
                 "bhaasha":"English"
@@ -103,7 +103,7 @@ Fetch a random thought from the database.
         [
             {
                 "sankhya":6480,
-                "vichaar":"I like long walks, especially    when they are taken by people who annoy me.",
+                "vichaar":"I like long walks, especially when they are taken by people who annoy me.",
                 "vichaarak":"Fred Allen",
                 "vishay":"Funny",
                 "bhaasha":"English"
@@ -144,35 +144,35 @@ Fetch n number of random thoughts from the database.
         [
             {
                 "sankhya":1042,
-                "vichaar":"February days are a marketing    gimmick; love happens every day.",
+                "vichaar":"February days are a marketing gimmick; love happens every day.",
                 "vichaarak":"Randeep Hooda",
                 "vishay":"Love",
                 "bhaasha":"English"
             },
             {
                 "sankhya":2778,
-                "vichaar":"We must not show to all and  sundry the secrets of the waters flowing in  ocean and river, or the devices that work on     these waters. Let there be convened a   council of experts and masters in mechanical  art to deliberate what is needed to compose  and construct these works.",
+                "vichaar":"We must not show to all and sundry the secrets of the waters flowing in ocean and river, or the devices that work on these waters. Let there be convened a council of experts and masters in mechanical art to deliberate what is needed to compose and construct these works.",
                 "vichaarak":"Filippo Brunelleschi",
                 "vishay":"Art",
                 "bhaasha":"English"
             },
             {
                 "sankhya":3222,
-                "vichaar":"Rock n' roll as a genre is   different from pop and hip hop: it is about   bands, and that for me suggests brotherhood,  family, friendship and community.",
+                "vichaar":"Rock n' roll as a genre is different from pop and hip hop: it is about bands, and that for me suggests brotherhood, family, friendship and community.",
                 "vichaarak":"Steven Van Zandt",
                 "vishay":"Friendship",
                 "bhaasha":"English"
             },
             {
                 "sankhya":6726,
-                "vichaar":"I think it's great to see how    they've grown up, not just as actors but as    people. They're still very much the same   kids that I met many years ago. They've   grown up and they are funny and wicked and    naughty and bright, and I think as actors  their work is just getting better and    better. They've blossomed.",
+                "vichaar":"I think it's great to see how they've grown up, not just as actors but as people. They're still very much the same kids that I met many years ago. They've grown up and they are funny and wicked and    naughty and bright, and I think as actors their work is just getting better and better. They've blossomed.",
                 "vichaarak":"David Heyman",
                 "vishay":"Funny",
                 "bhaasha":"English"
             },
             {
                 "sankhya":7413,
-                "vichaar":"I wish people would turn off     their computers, go outside, talk to people,    touch people, lick people, enjoy each  other's company and smell each other on the  rump.",
+                "vichaar":"I wish people would turn off their computers, go outside, talk to people, touch people, lick people, enjoy each other's company and smell each other on the rump.",
                 "vichaarak":"Tre Cool",
                 "vishay":"Computer",
                 "bhaasha":"English"

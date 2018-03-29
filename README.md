@@ -3,6 +3,7 @@
     * [Features](#features)
     * [Lingo](#lingo)
 * [Documentaion](#documentation)
+* [Attribution](#attribution)
 
 # Introduction
 Vichaar is a RESTful web API that lets you fetch one or n thoughts (quotes) from a database of 10,000+ thoughts (quotes).
@@ -79,7 +80,7 @@ Fetch a particular thought from the database with its ID.
       --url 'https://vichaar.herokuapp.com/?sankhya=1234'
     ```
 
-* __Notes__
+* __Note__
 
     304 NOT MODIFIED simply means that the requested thought was not found, hence an empty array `[]` is returned.
 
@@ -299,4 +300,7 @@ Fetch n random thoughts of a particular topic from the database.
       --url 'https://vichaar.herokuapp.com/random?vishay=Funny&n=5'
     ```
 
-#### Signing-off v1.2, Abhay Kumar
+# Attribution
+[BrainyQuote](https://www.brainyquote.com/)
+
+#### Signing-off v1.3, Abhay Kumar

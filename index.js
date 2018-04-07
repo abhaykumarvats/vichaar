@@ -31,7 +31,7 @@ app.get('/random', (req, res) => {
                 // Find relevant document(s) after skipping 'random' documents
                 Vichaar.find({ vishay: vishay }, { _id: 0, __v: 0 })
                 .skip(random)
-                .limit(n || 1)
+                .limit(n)
                 .exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any
@@ -58,7 +58,7 @@ app.get('/random', (req, res) => {
                 
                 // Find the relevant document(s)
                 Vichaar.find({ sankhya: { $in: randomArray } }, { _id: 0, __v: 0 })
-                .limit(n || 1)
+                .limit(n)
                 .exec((err, vichaar) => {
                     if (err) {
                         // Log error, if any

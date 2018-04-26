@@ -303,4 +303,4 @@ Fetch n random thoughts of a particular topic from the database.
 # Attribution
 [BrainyQuote](https://www.brainyquote.com/)
 
-#### Signing-off v1.3, Abhay Kumar
+#### Signing-off, Abhay Kumar
